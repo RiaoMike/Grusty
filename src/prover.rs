@@ -47,6 +47,7 @@ where
     let mut witness_curr = witness.clone();
     let mut round = 1;
     while crs_use.next_crs.is_some() {
+        println!("round {}", round);
         io = IOPattern::new(Box::new(format!("SIS Reduction Proof round {}", round)).leak())
             .labrador_io(crs_use);
         merlin = io.to_merlin();

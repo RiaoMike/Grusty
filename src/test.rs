@@ -65,7 +65,7 @@ mod tests {
     fn test_sis_reduction_proof() {
         // instance
         let m = 4;
-        let n = 128;
+        let n = 256;
         println!("begin generate random sis instance");
         let sis = random_sis_instance::<R>(m, n);
         let proofs = prove::<R>(&sis).expect("Fail to Prove");
